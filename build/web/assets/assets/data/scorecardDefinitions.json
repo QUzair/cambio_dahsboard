@@ -1,0 +1,244 @@
+{
+    "drivers": [{
+            "driverName": "Opportunity 🔑",
+            "driverDescription": "Typically, opportunities in social entrepreneurship are based on the need to create social value which benefits the local community. A social enterprise usually does this by solving a problem or providing assistance in an area of need or disadvantage. Therefore, creating social value and not wealth is the main driver for social entrepreneurs. Additionally, they need to achieve financial stability to maintain value. Here is a quick glimpse at the market niches which have many social enterprises:",
+            "scoreVal": 7,
+            "levers": [{
+                    "leverName": "Enterprise and Business Planning ",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Number of Ongoing Projects"
+                        },
+                        {
+                            "kpiQuestion": "Number of projects in the pipeline"
+                        },
+                        {
+                            "kpiQuestion": "Number of clients"
+                        },
+                        {
+                            "kpiQuestion": "Number of Clients working with Humans in the Loop (HITL) for more than a year (recurring clients)"
+                        }
+
+                    ]
+                },
+                {
+                    "leverName": "Employment Levels 📚",
+                    "leverDescription": "How many people are employed and their diversity",
+                    "kpis": [{
+                            "kpiQuestion": "Average number of workers / clients"
+                        },
+                        {
+                            "kpiQuestion": "Total number of workers / country"
+                        },
+                        {
+                            "kpiQuestion": "Split FT / PT"
+                        },
+                        {
+                            "kpiQuestion": "Unused capacity (spare utilisation)"
+                        },
+                        {
+                            "kpiQuestion": "Worker retention"
+                        },
+                        {
+                            "kpiQuestion": "% of people at each 'stage'"
+                        }
+                    ]
+                },
+                {
+                    "leverName": "Job Quality ",
+                    "leverDescription": "Quality of Job depends on how well managed are social and work life to increase productivity",
+                    "kpis": [{
+                            "kpiQuestion": "Number of hours worked"
+                        },
+                        {
+                            "kpiQuestion": "Average Wage"
+                        },
+                        {
+                            "kpiQuestion": "Job Satisfaction"
+                        }
+                    ]
+                }
+            ]
+
+        },
+        {
+            "driverName": "Upskilling 🏫",
+            "driverDescription": "Increasing Value – Employee training can teach new skills or improve existing skills. This helps to provide more expertise and increase their value to be able to perform more than one job. Diverse skill sets can help your employees transfer to open positions in your organization.",
+            "scoreVal": 8.3,
+            "levers": [{
+                    "leverName": "Education",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Highest level of education completed by employees (% split or average)"
+                        },
+                        {
+                            "kpiQuestion": "Share of workers currently attending classes (%)"
+                        },
+
+                        {
+                            "kpiQuestion": "Share of workers planning to enrol in further education in the coming years (%)"
+                        }
+                    ]
+                },
+                {
+                    "leverName": "Experience",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Share of workers having previous professional experience"
+                        },
+                        {
+                            "kpiQuestion": "Average professional experience in years"
+                        },
+                        {
+                            "kpiQuestion": "Share of workers having part-time/freelance jobs in addition to HITL (%) "
+                        }
+                    ]
+                },
+                {
+                    "leverName": "Training",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Average number of hours of training received /employee / month"
+                        },
+                        {
+                            "kpiQuestion": "Average number of training opportunities available / employee / year"
+                        },
+                        {
+                            "kpiQuestion": "Share of trainings provided that deliver official certificates"
+                        },
+                        {
+                            "kpiQuestion": "Efficiency improvements for pre-defined tasks (average in minute)"
+                        },
+                        {
+                            "kpiQuestion": "Average recommendation rate of trainings by employees / or satisfaction score"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "driverName": "Innovation 💡",
+            "driverDescription": "Another benefit of becoming a social entrepreneur is the freedom to explore and create innovative solutions that can inspire change. Social entrepreneurs are constantly on the lookout for new and inventive solutions to problems and often enlist leaders within their field to assist in project development. Taking risks rewards social entrepreneurs; thinking outside the box and looking for create ways to address problems.",
+            "scoreVal": 8.6,
+            "levers": [{
+                    "leverName": "Professional",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                        "kpiQuestion": "Average time since last update of tools used"
+                    }]
+                },
+                {
+                    "leverName": "Social",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Hours worked from home/Total number of hours worked"
+                        },
+                        {
+                            "kpiQuestion": "Enabling new ways of working"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "driverName": "Community 👫",
+            "driverDescription": "Social entrepreneurs create businesses in a variety of industries that can have a positive impact on society, including alternative energy, health awareness and education. Social entrepreneurs view communities as the solution and not as the beneficiaries of products and services. Social entrepreneurs provide the resources and expertise that help communities improve their qualities of life.",
+            "scoreVal": 7.4,
+            "levers": [{
+                    "leverName": "Demographic Split",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Median age of employee (measured for each country)"
+                        },
+                        {
+                            "kpiQuestion": "% women in the workforce (measured for each country)"
+                        }
+                    ]
+                },
+                {
+                    "leverName": "Network / Partners",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Total referrals to program from current employees/alumni"
+                        },
+                        {
+                            "kpiQuestion": "Number of  long term partners (longer than 2 years)"
+                        },
+                        {
+                            "kpiQuestion": "Median number of hired employees per partner (measured for each country)"
+                        },
+                        {
+                            "kpiQuestion": "Number of partners (measured for each country)"
+                        },
+                        {
+                            "kpiQuestion": "Number of former employees in alumni network"
+                        },
+                        {
+                            "kpiQuestion": "Job satisfaction rating  - % employers rated in top tier (satisfaction ratings 8+)"
+                        },
+                        {
+                            "kpiQuestion": "Job satisfaction rating  - % employers rated as middle tier (satisfaction ratings 6-8)"
+                        },
+                        {
+                            "kpiQuestion": "Job satisfaction rating  - % employers rated as bottom tier (satisfaction ratings 0-5)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "driverName": "Excellence ⭐",
+            "driverDescription": "This social entrepreneurship delivers benefits in a self-sustaining way by using their revenues to finance activities that generate social benefit. Social entrepreneurs use their business and creative skills to help identify and solve social problems on a large scale. Sustainability projects our ability to generate social benefit",
+            "scoreVal": 6.9,
+            "levers": [{
+                    "leverName": "Financial Excellence",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Reporting standards followed"
+                        },
+                        {
+                            "kpiQuestion": "Number of funding sources (to identify potential dependence on funding suppliers)"
+                        },
+                        {
+                            "kpiQuestion": "Cash reserves on Balance Sheet"
+                        }
+                    ]
+                },
+                {
+                    "leverName": "Operational Excellence",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Collaboration of colleagues"
+                        },
+                        {
+                            "kpiQuestion": "Level of continuous improvements of processes"
+                        },
+                        {
+                            "kpiQuestion": "Agility of the company"
+                        },
+                        {
+                            "kpiQuestion": "Number of Advisors in the Supervisory Board"
+                        },
+                        {
+                            "kpiQuestion": "Number of years of experience in Social Enterprise across Management"
+                        },
+                        {
+                            "kpiQuestion": "Number of years of experience in Social Enterprise across Supervisory Board"
+                        }
+
+                    ]
+                },
+                {
+                    "leverName": "Social Impact Excellence",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Level of continuous improvements"
+                        }
+
+                    ]
+                }
+            ]
+
+        }
+    ]
+}
