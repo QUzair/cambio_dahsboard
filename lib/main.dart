@@ -102,14 +102,30 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Image.asset("assets/images/hitl_logo.png"),
             SizedBox(
-              width: size.width * .003,
+              width: size.width * .01,
             ),
-            Text(
-              "Cambio",
-              style: TextStyle(
-                  fontSize: 45,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w100),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  "HITL - Cambio",
+                  style: TextStyle(
+                      fontSize: 45,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w100),
+                ),
+                SizedBox(
+                  width: size.width * .005,
+                ),
+                Text(
+                  "Most Transparent Social Enterprise",
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w100),
+                ),
+              ],
             ),
           ],
         ),

@@ -34,7 +34,7 @@
                     ]
                 },
                 {
-                    "leverName": "Employment Levels 📚",
+                    "leverName": "Employment Levels",
                     "leverDescription": "How many people are employed and their diversity",
                     "kpis": [{
                             "kpiQuestion": "Average number of workers / clients",
