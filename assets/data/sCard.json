@@ -1,0 +1,59 @@
+{
+    "drivers": [{
+            "driverName": "Opportunity 🔑",
+            "driverDescription": "Typically, opportunities in social entrepreneurship are based on the need to create social value which benefits the local community. A social enterprise usually does this by solving a problem or providing assistance in an area of need or disadvantage. Therefore, creating social value and not wealth is the main driver for social entrepreneurs. Additionally, they need to achieve financial stability to maintain value. Here is a quick glimpse at the market niches which have many social enterprises:",
+            "scoreVal": 7,
+            "levers": [{
+                    "leverName": "Enterprise and Business Planning ",
+                    "leverDescription": "Lorem IpsumPlanning",
+                    "kpis": [{
+                            "kpiQuestion": "Number of Ongoing Projects",
+                            "valueType": "BarChart",
+                            "user": "Management",
+                            "coordinates": [
+                                {
+                                    "xValue":"None",
+                                    "yValue": 10
+                                },
+                                {
+                                    "xValue":"Bachelors",
+                                    "yValue": 18
+                                },
+                                {
+                                    "xValue":"Masters",
+                                    "yValue": 8
+                                },
+                                {
+                                    "xValue":"Post-Doc",
+                                    "yValue": 4
+                                }
+                            ] 
+                        },
+                        {
+                            "kpiQuestion": "Number of projects in the pipeline",
+                            "valueType": "Scale",
+                            "user": "Management",
+                            "value": 9,
+                            "coordinates":[]
+                        },
+                        {
+                            "kpiQuestion": "Number of clients",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 7
+                        },
+                        {
+                            "kpiQuestion": "Number of Clients working with Humans in the Loop (HITL) for more than a year (recurring clients)",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 6,
+                            "coordinates":[]
+                        }
+
+                    ]
+            }
+            ]
+
+        }
+    ]
+}

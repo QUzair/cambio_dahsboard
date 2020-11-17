@@ -1,22 +1,34 @@
 {
     "drivers": [{
-            "driverName": "Opportunity",
+            "driverName": "Opportunity 🔑",
             "driverDescription": "Typically, opportunities in social entrepreneurship are based on the need to create social value which benefits the local community. A social enterprise usually does this by solving a problem or providing assistance in an area of need or disadvantage. Therefore, creating social value and not wealth is the main driver for social entrepreneurs. Additionally, they need to achieve financial stability to maintain value. Here is a quick glimpse at the market niches which have many social enterprises:",
             "scoreVal": 7,
             "levers": [{
-                    "leverName": "Enterprise and Business Planning ⏫",
+                    "leverName": "Enterprise and Business Planning ",
                     "leverDescription": "Lorem IpsumPlanning",
                     "kpis": [{
-                            "kpiQuestion": "Number of Ongoing Projects"
+                            "kpiQuestion": "Number of Ongoing Projects",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 15
                         },
                         {
-                            "kpiQuestion": "Number of projects in the pipeline"
+                            "kpiQuestion": "Number of projects in the pipeline",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 9
                         },
                         {
-                            "kpiQuestion": "Number of clients"
+                            "kpiQuestion": "Number of clients",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 7
                         },
                         {
-                            "kpiQuestion": "Number of Clients working with Humans in the Loop (HITL) for more than a year (recurring clients)"
+                            "kpiQuestion": "Number of Clients working with Humans in the Loop (HITL) for more than a year (recurring clients)",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 6
                         }
 
                     ]
@@ -25,36 +37,79 @@
                     "leverName": "Employment Levels 📚",
                     "leverDescription": "How many people are employed and their diversity",
                     "kpis": [{
-                            "kpiQuestion": "Average number of workers / clients"
+                            "kpiQuestion": "Average number of workers / clients",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 60
                         },
                         {
-                            "kpiQuestion": "Total number of workers / country"
+                            "kpiQuestion": "Total number of workers / country",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 42
                         },
                         {
-                            "kpiQuestion": "Split FT / PT"
+                            "kpiQuestion": "Split FT / PT",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 2
                         },
                         {
-                            "kpiQuestion": "Unused capacity (spare utilisation)"
+                            "kpiQuestion": "Unused capacity (spare utilisation)",
+                            "valueType": "Scale",
+                            "user": "Management",
+                            "value": 1.3
                         },
                         {
-                            "kpiQuestion": "Worker retention"
+                            "kpiQuestion": "Worker retention",
+                            "valueType": "Scale",
+                            "user": "Management",
+                            "value": 9,
+                            "coordinates": []
                         },
                         {
-                            "kpiQuestion": "% of people at each 'stage'"
+                            "kpiQuestion": "% of people at each 'stage'",
+                            "valueType": "BarChart",
+                            "user": "Management",
+                            "coordinates": [{
+                                    "xValue": "Associate",
+                                    "yValue": 56
+                                },
+                                {
+                                    "xValue": "Management",
+                                    "yValue": 10
+                                },
+                                {
+                                    "xValue": "President",
+                                    "yValue": 4
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "leverName": "Job Quality 🕰️",
+                    "leverName": "Job Quality ",
                     "leverDescription": "Quality of Job depends on how well managed are social and work life to increase productivity",
                     "kpis": [{
-                            "kpiQuestion": "Number of hours worked"
+                            "kpiQuestion": "Number of hours worked hr/week",
+                            "valueType": "Number",
+                            "user": "Employees",
+                            "value": 40,
+                            "coordinates": []
                         },
                         {
-                            "kpiQuestion": "Average Wage"
+                            "kpiQuestion": "Average Wage €/hr",
+                            "valueType": "Number",
+                            "user": "Employees",
+                            "value": 5.45,
+                            "coordinates": []
                         },
                         {
-                            "kpiQuestion": "Job Satisfaction"
+                            "kpiQuestion": "Job Satisfaction",
+                            "valueType": "Scale",
+                            "user": "Employees",
+                            "value": 9.5,
+                            "coordinates": []
                         }
                     ]
                 }
@@ -69,14 +124,39 @@
                     "leverName": "Education",
                     "leverDescription": "Lorem IpsumPlanning",
                     "kpis": [{
-                            "kpiQuestion": "Highest level of education completed by employees (% split or average)"
+                            "kpiQuestion": "Highest level of education completed by employees (% split or average)",
+                            "valueType": "BarChart",
+                            "user": "Employees",
+                            "coordinates": [{
+                                    "xValue": "None",
+                                    "yValue": 10
+                                },
+                                {
+                                    "xValue": "Bachelors",
+                                    "yValue": 18
+                                },
+                                {
+                                    "xValue": "Masters",
+                                    "yValue": 8
+                                },
+                                {
+                                    "xValue": "Post-Doc",
+                                    "yValue": 4
+                                }
+                            ]
                         },
                         {
-                            "kpiQuestion": "Share of workers currently attending classes (%)"
+                            "kpiQuestion": "Share of workers currently attending classes (%)",
+                            "valueType": "Scale",
+                            "user": "Employee",
+                            "value": 8.9
                         },
 
                         {
-                            "kpiQuestion": "Share of workers planning to enrol in further education in the coming years (%)"
+                            "kpiQuestion": "Share of workers planning to enrol in further education in the coming years (%)",
+                            "valueType": "Scale",
+                            "user": "Employee",
+                            "value": 6.5
                         }
                     ]
                 },
@@ -84,13 +164,50 @@
                     "leverName": "Experience",
                     "leverDescription": "Lorem IpsumPlanning",
                     "kpis": [{
-                            "kpiQuestion": "Share of workers having previous professional experience"
+                            "kpiQuestion": "Share of workers having previous professional experience",
+                            "valueType": "BarChart",
+                            "user": "Management",
+                            "coordinates": [{
+                                    "xValue": "0",
+                                    "yValue": 2
+                                },
+                                {
+                                    "xValue": "1-3",
+                                    "yValue": 45
+                                },
+                                {
+                                    "xValue": "4-7",
+                                    "yValue": 13
+                                },
+                                {
+                                    "xValue": "8+",
+                                    "yValue": 8
+                                }
+                            ]
                         },
                         {
-                            "kpiQuestion": "Average professional experience in years"
+                            "kpiQuestion": "Average professional experience in years",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 2.5
                         },
                         {
-                            "kpiQuestion": "Share of workers having part-time/freelance jobs in addition to HITL (%) "
+                            "kpiQuestion": "Share of workers having part-time/freelance jobs in addition to HITL (%) ",
+                            "valueType": "BarChart",
+                            "user": "Management",
+                            "coordinates": [{
+                                    "xValue": "Freelance",
+                                    "yValue": 6
+                                },
+                                {
+                                    "xValue": "Part-Time",
+                                    "yValue": 14
+                                },
+                                {
+                                    "xValue": "Full-Time",
+                                    "yValue": 36
+                                }
+                            ]
                         }
                     ]
                 },
@@ -98,60 +215,138 @@
                     "leverName": "Training",
                     "leverDescription": "Lorem IpsumPlanning",
                     "kpis": [{
-                            "kpiQuestion": "Average number of hours of training received /employee / month"
+                            "kpiQuestion": "Average number of hours of training received /employee / month",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 14
                         },
                         {
-                            "kpiQuestion": "Average number of training opportunities available / employee / year"
+                            "kpiQuestion": "Average number of training opportunities available / employee / year",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 5
                         },
                         {
-                            "kpiQuestion": "Share of trainings provided that deliver official certificates"
+                            "kpiQuestion": "Share of trainings provided that deliver official certificates",
+                            "valueType": "BarChart",
+                            "user": "Management",
+                            "coordinates": [
+                                {
+                                    "xValue":"Certification",
+                                    "yValue": 7
+                                },
+                                {
+                                    "xValue":"License",
+                                    "yValue": 3
+                                },
+                                {
+                                    "xValue":"BasicTraining",
+                                    "yValue": 6
+                                }
+                            ]
                         },
                         {
-                            "kpiQuestion": "Efficiency improvements for pre-defined tasks (average in minute)"
+                            "kpiQuestion": "Efficiency improvements for pre-defined tasks (average in minute)",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 8,
+                            "coordinates":[]
                         },
                         {
-                            "kpiQuestion": "Average recommendation rate of trainings by employees / or satisfaction score"
+                            "kpiQuestion": "Average recommendation rate of trainings by employees / or satisfaction score",
+                            "valueType": "Scale",
+                            "user": "Management",
+                            "value": 8.6,
+                            "coordinates":[]
                         }
                     ]
                 }
             ]
         },
         {
-            "driverName": "Innovation",
+            "driverName": "Innovation 💡",
             "driverDescription": "Another benefit of becoming a social entrepreneur is the freedom to explore and create innovative solutions that can inspire change. Social entrepreneurs are constantly on the lookout for new and inventive solutions to problems and often enlist leaders within their field to assist in project development. Taking risks rewards social entrepreneurs; thinking outside the box and looking for create ways to address problems.",
             "scoreVal": 8.6,
             "levers": [{
                     "leverName": "Professional",
                     "leverDescription": "Lorem IpsumPlanning",
                     "kpis": [{
-                        "kpiQuestion": "Average time since last update of tools used"
+                        "kpiQuestion": "Average time since last update of tools used (months)",
+                        "valueType": "Number",
+                            "user": "Management",
+                            "value": 4
                     }]
                 },
                 {
                     "leverName": "Social",
                     "leverDescription": "Lorem IpsumPlanning",
                     "kpis": [{
-                            "kpiQuestion": "Hours worked from home/Total number of hours worked"
+                            "kpiQuestion": "Hours worked from home/Total number of hours worked",
+                            "valueType": "Scale",
+                            "user": "Management",
+                            "value": 8.7
                         },
                         {
-                            "kpiQuestion": "Enabling new ways of working"
+                            "kpiQuestion": "Enabling new ways of working",
+                            "valueType": "Article",
+                            "user": "Management"
                         }
                     ]
                 }
             ]
         },
         {
-            "driverName": "Community",
+            "driverName": "Community 👫",
             "driverDescription": "Social entrepreneurs create businesses in a variety of industries that can have a positive impact on society, including alternative energy, health awareness and education. Social entrepreneurs view communities as the solution and not as the beneficiaries of products and services. Social entrepreneurs provide the resources and expertise that help communities improve their qualities of life.",
             "scoreVal": 7.4,
             "levers": [{
                     "leverName": "Demographic Split",
                     "leverDescription": "Lorem IpsumPlanning",
                     "kpis": [{
-                            "kpiQuestion": "Median age of employee (measured for each country)"
+                            "kpiQuestion": "Median age of employee (measured for each Continent)",
+                            "valueType": "BarChart",
+                            "user": "Management",
+                            "coordinates": [
+                                {
+                                    "xValue":"Africa",
+                                    "yValue": 23
+                                },
+                                {
+                                    "xValue":"Asia",
+                                    "yValue": 28
+                                },
+                                {
+                                    "xValue":"Europe",
+                                    "yValue": 24
+                                },
+                                {
+                                    "xValue":"America",
+                                    "yValue": 25
+                                }
+                            ] 
                         },
                         {
-                            "kpiQuestion": "% women in the workforce (measured for each country)"
+                            "kpiQuestion": "% women in the workforce (measured for each continent)",
+                            "valueType": "BarChart",
+                            "user": "Management",
+                            "coordinates": [
+                                {
+                                    "xValue":"Africa",
+                                    "yValue": 52
+                                },
+                                {
+                                    "xValue":"Asia",
+                                    "yValue": 45
+                                },
+                                {
+                                    "xValue":"Europe",
+                                    "yValue": 48
+                                },
+                                {
+                                    "xValue":"America",
+                                    "yValue": 41
+                                }
+                            ] 
                         }
                     ]
                 },
@@ -168,39 +363,82 @@
                             "kpiQuestion": "Median number of hired employees per partner (measured for each country)"
                         },
                         {
-                            "kpiQuestion": "Number of partners (measured for each country)"
+                            "kpiQuestion": "Number of partners (measured for each country)",
+                            "valueType": "BarChart",
+                            "user": "Management",
+                            "coordinates": [
+                                {
+                                    "xValue":"Africa",
+                                    "yValue": 3
+                                },
+                                {
+                                    "xValue":"Asia",
+                                    "yValue": 11
+                                },
+                                {
+                                    "xValue":"Europe",
+                                    "yValue": 9
+                                },
+                                {
+                                    "xValue":"America",
+                                    "yValue": 7
+                                }
+                            ]
+
                         },
                         {
-                            "kpiQuestion": "Number of former employees in alumni network"
+                            "kpiQuestion": "Number of former employees in alumni network",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 23
                         },
                         {
-                            "kpiQuestion": "Job satisfaction rating  - % employers rated in top tier (satisfaction ratings 8+)"
+                            "kpiQuestion": "Job satisfaction rating  - % employers rated in top tier (satisfaction ratings 8+)",
+                            "valueType": "Scale",
+                            "user": "Management",
+                            "value": 7.5
                         },
                         {
-                            "kpiQuestion": "Job satisfaction rating  - % employers rated as middle tier (satisfaction ratings 6-8)"
+                            "kpiQuestion": "Job satisfaction rating  - % employers rated as middle tier (satisfaction ratings 6-8)",
+                            "valueType": "Scale",
+                            "user": "Management",
+                            "value": 7.9
                         },
                         {
-                            "kpiQuestion": "Job satisfaction rating  - % employers rated as bottom tier (satisfaction ratings 0-5)"
+                            "kpiQuestion": "Job satisfaction rating  - % employers rated as bottom tier (satisfaction ratings 0-5)",
+                            "valueType": "Scale",
+                            "user": "Management",
+                            "value": 7.5
                         }
                     ]
                 }
             ]
         },
         {
-            "driverName": "Excellence",
+            "driverName": "Excellence ⭐",
             "driverDescription": "This social entrepreneurship delivers benefits in a self-sustaining way by using their revenues to finance activities that generate social benefit. Social entrepreneurs use their business and creative skills to help identify and solve social problems on a large scale. Sustainability projects our ability to generate social benefit",
             "scoreVal": 6.9,
             "levers": [{
                     "leverName": "Financial Excellence",
                     "leverDescription": "Lorem IpsumPlanning",
                     "kpis": [{
-                            "kpiQuestion": "Reporting standards followed"
+                            "kpiQuestion": "Reporting standards followed",
+                            "valueType": "Article",
+                            "user": "Management"
+
                         },
                         {
-                            "kpiQuestion": "Number of funding sources (to identify potential dependence on funding suppliers)"
+                            "kpiQuestion": "Number of funding sources (to identify potential dependence on funding suppliers)",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 6
+                            
                         },
                         {
-                            "kpiQuestion": "Cash reserves on Balance Sheet"
+                            "kpiQuestion": "Cash reserves on Balance Sheet £",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 110643
                         }
                     ]
                 },
@@ -208,22 +446,50 @@
                     "leverName": "Operational Excellence",
                     "leverDescription": "Lorem IpsumPlanning",
                     "kpis": [{
-                            "kpiQuestion": "Collaboration of colleagues"
+                            "kpiQuestion": "Collaboration of colleagues",
+                            "valueType": "Article",
+                            "user": "Management"
                         },
                         {
-                            "kpiQuestion": "Level of continuous improvements of processes"
+                            "kpiQuestion": "Level of continuous improvements of processes",
+                            "valueType": "Article",
+                            "user": "Management"
                         },
                         {
-                            "kpiQuestion": "Agility of the company"
+                            "kpiQuestion": "Agility of the company",
+                            "valueType": "Article",
+                            "user": "Management"
                         },
                         {
-                            "kpiQuestion": "Number of Advisors in the Supervisory Board"
+                            "kpiQuestion": "Number of Advisors in the Supervisory Board",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 6
                         },
                         {
-                            "kpiQuestion": "Number of years of experience in Social Enterprise across Management"
+                            "kpiQuestion": "Number of years of experience in Social Enterprise across Management",
+                            "valueType": "Number",
+                            "user": "Management",
+                            "value": 12
                         },
                         {
-                            "kpiQuestion": "Number of years of experience in Social Enterprise across Supervisory Board"
+                            "kpiQuestion": "Number of years of experience in Social Enterprise across Supervisory Board",
+                            "valueType": "BarChart",
+                            "user": "Management",
+                            "coordinates": [
+                                {
+                                    "xValue":"1-3",
+                                    "yValue": 6
+                                },
+                                {
+                                    "xValue":"4-6",
+                                    "yValue": 4
+                                },
+                                {
+                                    "xValue":"7+",
+                                    "yValue": 2
+                                }
+                            ] 
                         }
 
                     ]
@@ -232,9 +498,19 @@
                     "leverName": "Social Impact Excellence",
                     "leverDescription": "Lorem IpsumPlanning",
                     "kpis": [{
-                            "kpiQuestion": "Level of continuous improvements"
+                            "kpiQuestion": "Share of wages paid/total revenue %",
+                            "valueType": "Scale",
+                            "user": "Management",
+                            "value": 6.8,
+                            "coordinates":[]
+                        },
+                        {
+                            "kpiQuestion": "Share of employees that feel financially safe",
+                            "valueType": "Scale",
+                            "user": "Management",
+                            "value": 9.4,
+                            "coordinates":[]
                         }
-
                     ]
                 }
             ]

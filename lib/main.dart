@@ -1,7 +1,9 @@
 import 'dart:convert';
+import 'dart:html';
 import 'dart:math';
 
 import 'package:cambio_dashboard/model/kpi_model.dart';
+import 'package:cambio_dashboard/widgets/bar_chart.dart';
 import 'package:cambio_dashboard/widgets/driver_card.dart';
 import 'package:expansion_card/expansion_card.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return NeumorphicApp(
       debugShowCheckedModeBanner: false,
-      title: 'Neumorphic App',
+      title: 'Cambio',
       themeMode: ThemeMode.light,
       theme: NeumorphicThemeData(
         baseColor: Color(0xFFf7f3f2),
@@ -66,8 +68,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<List<Driver>> fetchScorecard() async {
     String data = await DefaultAssetBundle.of(context)
         .loadString("assets/data/scorecardDefinitions.json");
-
-    print(data);
     dynamic jsonData = jsonDecode(data);
     _scoreCard = List<Driver>.from(
         jsonData['drivers'].map((json) => Driver.fromJson(json)));
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   int groupValue = 0;
-  String selectedDriver = "Opportunity";
+  String selectedDriver = "Opportunity 🔑";
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -119,160 +119,215 @@ class _MyHomePageState extends State<MyHomePage> {
           future: _scoreCardFuture,
           builder:
               (BuildContext context, AsyncSnapshot<List<Driver>> snapshot) {
-            List<Driver> scoreCard = snapshot.data;
-            return snapshot.connectionState == ConnectionState.waiting ||
-                    snapshot.data.length == 0
-                ? Container(
-                    child: Text("Fetching Data"),
-                  )
-                : Column(
-                    children: [
-                      SizedBox(
-                        height: size.height * .025,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: scoreCard
-                            .map((driver) => Expanded(
-                                  flex: 1,
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      print(driver.driverName);
-                                      setState(() {
-                                        selectedDriver = driver.driverName;
-                                      });
-                                    },
-                                    child: DriverCard(
-                                      driverName: driver.driverName,
-                                      scoreVal: driver.scoreVal,
-                                      driverSelected: selectedDriver,
-                                    ),
-                                  ),
-                                ))
-                            .toList(),
-                      ),
-                      ExpansionCard(
-                        title: Container(
-                          child: Padding(
-                            padding: const EdgeInsets.all(15.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  findDriverByName(selectedDriver).driverName,
-                                  style: TextStyle(
-                                      fontSize: 35,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold),
+            List<Driver> _scoreCard = snapshot.data;
+            if (snapshot.connectionState == ConnectionState.waiting ||
+                snapshot.data.length == 0)
+              return Container(
+                child: Text("Fetching Data"),
+              );
+            else
+              return Column(
+                children: [
+                  SizedBox(
+                    height: size.height * .025,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: _scoreCard
+                        .map((driver) => Expanded(
+                              flex: 1,
+                              child: GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    selectedDriver = driver.driverName;
+                                  });
+                                },
+                                child: DriverCard(
+                                  driverName: driver.driverName,
+                                  scoreVal: driver.scoreVal,
+                                  driverSelected: selectedDriver,
                                 ),
-                                Text(
-                                  findDriverByName(selectedDriver)
-                                      .driverDescription,
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.black,
-                                      fontStyle: FontStyle.italic,
-                                      fontWeight: FontWeight.w100),
-                                ),
-                                Divider(),
-                              ],
+                              ),
+                            ))
+                        .toList(),
+                  ),
+                  ExpansionCard(
+                    initiallyExpanded: true,
+                    title: Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              findDriverByName(selectedDriver).driverName,
+                              style: const TextStyle(
+                                  fontSize: 35,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
                             ),
-                          ),
+                            Text(
+                              findDriverByName(selectedDriver)
+                                  .driverDescription,
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.w100,
+                              ),
+                            ),
+                            Divider(),
+                          ],
                         ),
-                        children: findDriverByName(selectedDriver)
-                            .levers
-                            .map((lever) => Container(
-                                  padding: EdgeInsets.all(30.0),
-                                  child: ExpansionCard(
-                                    title: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
+                      ),
+                    ),
+                    children: findDriverByName(selectedDriver)
+                        .levers
+                        .map((lever) => Container(
+                              padding: EdgeInsets.all(30.0),
+                              child: ExpansionCard(
+                                initiallyExpanded: true,
+                                title: Container(
+                                  decoration: BoxDecoration(
+                                      color:
+                                          Colors.purpleAccent.withOpacity(0.1),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(20))),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(12.0),
+                                        child: Text(
                                           lever.leverName,
                                           style: TextStyle(
                                               fontSize: 35,
                                               color: Colors.black,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              fontFamily: 'Montserrat'),
                                         ),
-                                        Text(
-                                          lever.leverDescription,
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              color: Colors.black,
-                                              fontStyle: FontStyle.italic,
-                                              fontWeight: FontWeight.w100),
-                                        ),
-                                        Divider(),
-                                      ],
-                                    ),
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.all(18.0),
-                                        child: Wrap(
-                                          children: lever.kpis
-                                              .map(
-                                                (kpi) => Padding(
-                                                  padding: const EdgeInsets.all(
-                                                      18.0),
-                                                  child: Neumorphic(
-                                                    style: NeumorphicStyle(
-                                                      boxShape:
-                                                          NeumorphicBoxShape
-                                                              .roundRect(
-                                                        BorderRadius.circular(
-                                                            10),
-                                                      ),
-                                                    ),
-                                                    child: Container(
-                                                      width: size.width / 5,
-                                                      height: size.width / 5,
-                                                      padding:
-                                                          EdgeInsets.all(8.0),
-                                                      child: Center(
-                                                        child: Column(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .spaceAround,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            Text(
-                                                              kpi.kpiQuestion,
-                                                            ),
-                                                            Text(
-                                                              rng
-                                                                  .nextInt(23)
-                                                                  .toString(),
-                                                              style: TextStyle(
-                                                                  fontSize: 45,
-                                                                  color: Colors
-                                                                      .black,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold),
-                                                            ),
-                                                          ],
+                                      ),
+                                      Divider(),
+                                    ],
+                                  ),
+                                ),
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(18.0),
+                                    child: Wrap(
+                                      children: lever.kpis
+                                          .map(
+                                            (kpi) => Padding(
+                                              padding:
+                                                  const EdgeInsets.all(18.0),
+                                              child: Neumorphic(
+                                                style: NeumorphicStyle(
+                                                  boxShape: NeumorphicBoxShape
+                                                      .roundRect(
+                                                    BorderRadius.circular(10),
+                                                  ),
+                                                ),
+                                                child: Container(
+                                                  width: size.width / 4,
+                                                  height: size.width / 4,
+                                                  padding: EdgeInsets.all(8.0),
+                                                  child: Center(
+                                                    child: Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceAround,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Text(
+                                                          kpi.kpiQuestion,
                                                         ),
-                                                      ),
+                                                        KPICard(
+                                                          rng: rng,
+                                                          kpi: kpi,
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
                                                 ),
-                                              )
-                                              .toList(),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ))
-                            .toList(),
-                      )
-                    ],
-                  );
+                                              ),
+                                            ),
+                                          )
+                                          .toList(),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ))
+                        .toList(),
+                  )
+                ],
+              );
           },
         ),
       ),
     );
+  }
+}
+
+class KPICard extends StatelessWidget {
+  const KPICard({Key key, @required this.rng, @required this.kpi})
+      : super(key: key);
+
+  final Random rng;
+  final KPI kpi;
+
+  @override
+  Widget build(BuildContext context) {
+    if (kpi.valueType == 'Number') {
+      return Text(
+        kpi.value != null ? kpi.value.toString() : rng.nextInt(23).toString(),
+        style: TextStyle(
+            fontSize: 65, color: Colors.black, fontWeight: FontWeight.bold),
+      );
+    } else if (kpi.valueType == 'BarChart') {
+      return kpi.values.isNotEmpty
+          ? BarChartSample1(
+              coordinates: kpi.values,
+            )
+          : Text("Read More");
+    } else if (kpi.valueType == 'Scale') {
+      return Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: NeumorphicProgress(
+                height: 15,
+                percent: kpi.value / 10,
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Text((kpi.value * 10).toString() + "%",
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w100))
+          ],
+        ),
+      );
+    } else
+      return Padding(
+        padding: const EdgeInsets.all(30.0),
+        child: (NeumorphicButton(
+          padding: EdgeInsets.all(8.0),
+          onPressed: () {},
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [Text("Read More"), Icon(Icons.read_more)],
+          ),
+        )),
+      );
   }
 }

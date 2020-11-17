@@ -27,6 +27,8 @@ dependencies:
   flutter_neumorphic: 3.0.2
   percent_indicator: "^2.1.7+2"
   expansion_card: ^0.1.0
+  fl_chart: ^0.12.0
+  syncfusion_flutter_charts: ^18.3.50
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -50,6 +52,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/data/scorecardDefinitions.json
+    - assets/data/sCard.json
     - assets/images/hitl_logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -33,8 +33,26 @@ class Lever {
 
 class KPI {
   final String kpiQuestion;
+  final String valueType;
+  final double value;
+  final List<Value> values;
 
-  KPI({this.kpiQuestion});
+  KPI({this.kpiQuestion, this.valueType, this.value,this.values});
 
-  KPI.fromJson(Map<String, dynamic> json) : kpiQuestion = json['kpiQuestion'];
+  KPI.fromJson(Map<String, dynamic> json)
+      : kpiQuestion = json['kpiQuestion'],
+        valueType = json['valueType'],
+        value = json['value'],
+        values = json['coordinates']==null? []: List<Value>.from(json['coordinates'].map((data) => Value.fromJson(data)));
+}
+
+class Value {
+  final String x;
+  final double y;
+
+  Value({this.x, this.y});
+
+  Value.fromJson(Map<String, dynamic> json)
+      : x = json['xValue'],
+        y = json['yValue'];
 }
